@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文化遗产保护与利用</title>
+    <style>
+        :root {
+            --primary: #00695c;
+            --primary-light: #439889;
+            --primary-dark: #003d33;
+            --bg-color: #fafafa;
+            --card-bg: #ffffff;
+            --text-primary: #212121;
+            --text-secondary: #616161;
+            --border-color: #e0e0e0;
+        }
+
+        [data-theme="dark"] {
+            --bg-color: #121212;
+            --card-bg: #1e1e1e;
+            --text-primary: #ffffff;
+            --text-secondary: #b0b0b0;
+            --border-color: #333333;
+        }
+
+        body {
+            font-family: "Source Han Sans", "Noto Sans SC", -apple-system, BlinkMacSystemFont, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            line-height: 1.8;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.8em;
+            margin-bottom: 20px;
+            font-weight: 300;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        .chapter-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .chapter-card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid var(--border-color);
+        }
+
+        .chapter-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.12);
+        }
+
+        .chapter-image {
+            height: 180px;
+            background-color: var(--primary-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3em;
+        }
+
+        .chapter-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .chapter-content {
+            padding: 25px;
+        }
+
+        .chapter-number {
+            color: var(--primary);
+            font-size: 0.9em;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .chapter-title {
+            font-size: 1.4em;
+            margin: 0 0 15px 0;
+            color: var(--text-primary);
+        }
+
+        .chapter-desc {
+            color: var(--text-secondary);
+            font-size: 0.95em;
+            margin-bottom: 20px;
+        }
+
+        .chapter-link {
+            display: inline-flex;
+            align-items: center;
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .chapter-link:hover {
+            text-decoration: underline;
+        }
+
+        .theme-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5em;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .footer {
+            background: var(--card-bg);
+            border-top: 1px solid var(--border-color);
+            padding: 40px 20px;
+            text-align: center;
+            color: var(--text-secondary);
+        }
+
+        .footer a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2em;
+            }
+            .chapter-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
+
+    <div class="hero">
+        <h1>文化遗产保护与利用</h1>
+        <p>系统介绍文化遗产的概念界定、价值体系、保护原则与实践方法</p>
+    </div>
+
+    <div class="container">
+        <div class="chapter-grid">
+            <div class="chapter-card">
+                <div class="chapter-image">
+                    <img src="https://picsum.photos/400/200?random=1" alt="第一章">
+                </div>
+                <div class="chapter-content">
+                    <div class="chapter-number">第一章</div>
+                    <h3 class="chapter-title">文化遗产概述</h3>
+                    <p class="chapter-desc">介绍文化遗产的基本概念、多元价值体系，以及国际国内保护制度的发展历程与时代背景。</p>
+                    <a href="chapters/chapter1/" class="chapter-link">进入章节 →</a>
+                </div>
+            </div>
+
+            <div class="chapter-card">
+                <div class="chapter-image">
+                    <img src="https://picsum.photos/400/200?random=2" alt="第二章">
+                </div>
+                <div class="chapter-content">
+                    <div class="chapter-number">第二章</div>
+                    <h3 class="chapter-title">保护发展历程</h3>
+                    <p class="chapter-desc">回顾国际与中国文化遗产保护的发展脉络，阐述保护的基本原则与主要方法。</p>
+                    <a href="chapters/chapter2/" class="chapter-link">进入章节 →</a>
+                </div>
+            </div>
+
+            <div class="chapter-card">
+                <div class="chapter-image">
+                    <img src="https://picsum.photos/400/200?random=3" alt="第三章">
+                </div>
+                <div class="chapter-content">
+                    <div class="chapter-number">第三章</div>
+                    <h3 class="chapter-title">聚落文化遗产</h3>
+                    <p class="chapter-desc">探讨聚落文化遗产的认知基础、保护原则与实践方法，以及更新利用与制度保障。</p>
+                    <a href="chapters/chapter3/" class="chapter-link">进入章节 →</a>
+                </div>
+            </div>
+
+            <div class="chapter-card">
+                <div class="chapter-image">
+                    <img src="https://picsum.photos/400/200?random=4" alt="第四章">
+                </div>
+                <div class="chapter-content">
+                    <div class="chapter-number">第四章</div>
+                    <h3 class="chapter-title">建筑文化遗产</h3>
+                    <p class="chapter-desc">涵盖文物建筑的概念类型、保护技术与管理办法、活化利用策略及与城市更新的关系。</p>
+                    <a href="chapters/chapter4/" class="chapter-link">进入章节 →</a>
+                </div>
+            </div>
+
+            <div class="chapter-card">
+                <div class="chapter-image">
+                    <img src="https://picsum.photos/400/200?random=5" alt="第五章">
+                </div>
+                <div class="chapter-content">
+                    <div class="chapter-number">第五章</div>
+                    <h3 class="chapter-title">非物质文化遗产</h3>
+                    <p class="chapter-desc">阐述非物质文化遗产的概念特征、保护原则与措施、传承发展路径及数字化保护方法。</p>
+                    <a href="chapters/chapter5/" class="chapter-link">进入章节 →</a>
+                </div>
+            </div>
+
+            <div class="chapter-card">
+                <div class="chapter-image">
+                    <img src="https://picsum.photos/400/200?random=6" alt="第六章">
+                </div>
+                <div class="chapter-content">
+                    <div class="chapter-number">第六章</div>
+                    <h3 class="chapter-title">产业文化遗产</h3>
+                    <p class="chapter-desc">系统介绍农业遗产、工业遗产、手工业遗产、交通水利遗产及商业服务遗产的保护与利用。</p>
+                    <a href="chapters/chapter6/" class="chapter-link">进入章节 →</a>
+                </div>
+            </div>
+
+            <div class="chapter-card">
+                <div class="chapter-image">
+                    <img src="https://picsum.photos/400/200?random=7" alt="第七章">
+                </div>
+                <div class="chapter-content">
+                    <div class="chapter-number">第七章</div>
+                    <h3 class="chapter-title">民俗文物</h3>
+                    <p class="chapter-desc">探讨民俗文物的概念类型、保护与利用、分类特征、调查认定、保护技术与展示传播。</p>
+                    <a href="chapters/chapter7/" class="chapter-link">进入章节 →</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>华南理工大学设计学院 · 文化遗产保护与利用</p>
+        <p>联系邮箱：<a href="mailto:sdtshi@scut.edu.cn">sdtshi@scut.edu.cn</a></p>
+    </div>
+
+    <script>
+        function toggleTheme() {
+            const html = document.documentElement;
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            html.setAttribute('data-theme', newTheme);
+            document.querySelector('.theme-toggle').textContent = newTheme === 'dark' ? '☀️' : '🌙';
+            localStorage.setItem('theme', newTheme);
+        }
+
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+            document.documentElement.setAttribute('data-theme', savedTheme);
+            document.querySelector('.theme-toggle').textContent = savedTheme === 'dark' ? '☀️' : '🌙';
+        }
+    </script>
+</body>
+</html>

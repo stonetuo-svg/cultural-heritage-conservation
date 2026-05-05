@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a1a2e"/>
+      <stop offset="50%" stop-color="#16213e"/>
+      <stop offset="100%" stop-color="#0f3460"/>
+    </linearGradient>
+    <linearGradient id="building" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#c4956a"/>
+      <stop offset="100%" stop-color="#8b6914"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="600" fill="url(#sky)"/>
+  <!-- Mountains -->
+  <polygon points="0,450 150,300 300,420 450,280 600,400 750,320 900,380 1050,290 1200,400 1200,600 0,600" fill="#1a2744" opacity="0.6"/>
+  <polygon points="0,480 200,380 400,460 600,360 800,440 1000,370 1200,430 1200,600 0,600" fill="#152040" opacity="0.8"/>
+  <!-- Main building - temple/palace silhouette -->
+  <rect x="450" y="200" width="300" height="280" fill="url(#building)" rx="4"/>
+  <!-- Roof tiers -->
+  <polygon points="430,200 600,80 770,200" fill="#a0522d"/>
+  <polygon points="460,200 600,110 740,200" fill="#c4956a"/>
+  <!-- Roof details -->
+  <line x1="480" y1="200" x2="520" y2="140" stroke="#8b6914" stroke-width="3"/>
+  <line x1="550" y1="200" x2="580" y2="110" stroke="#8b6914" stroke-width="3"/>
+  <line x1="620" y1="200" x2="620" y2="90" stroke="#8b6914" stroke-width="3"/>
+  <line x1="680" y1="200" x2="650" y2="110" stroke="#8b6914" stroke-width="3"/>
+  <line x1="740" y1="200" x2="700" y2="140" stroke="#8b6914" stroke-width="3"/>
+  <!-- Columns -->
+  <rect x="470" y="230" width="12" height="250" fill="#deb887" opacity="0.5"/>
+  <rect x="510" y="230" width="12" height="250" fill="#deb887" opacity="0.5"/>
+  <rect x="550" y="230" width="12" height="250" fill="#deb887" opacity="0.5"/>
+  <rect x="590" y="230" width="12" height="250" fill="#deb887" opacity="0.5"/>
+  <rect x="630" y="230" width="12" height="250" fill="#deb887" opacity="0.5"/>
+  <rect x="670" y="230" width="12" height="250" fill="#deb887" opacity="0.5"/>
+  <rect x="710" y="230" width="12" height="250" fill="#deb887" opacity="0.5"/>
+  <!-- Doorway -->
+  <rect x="560" y="320" width="80" height="160" fill="#3e2723" rx="20 20 0 0"/>
+  <!-- Ground -->
+  <rect x="0" y="480" width="1200" height="120" fill="#1a1a2e"/>
+  <!-- Decorative dots (stars) -->
+  <circle cx="100" cy="80" r="1.5" fill="white" opacity="0.4"/>
+  <circle cx="300" cy="50" r="1" fill="white" opacity="0.3"/>
+  <circle cx="500" cy="100" r="1.5" fill="white" opacity="0.5"/>
+  <circle cx="750" cy="60" r="1" fill="white" opacity="0.3"/>
+  <circle cx="900" cy="90" r="1.5" fill="white" opacity="0.4"/>
+  <circle cx="1050" cy="40" r="1" fill="white" opacity="0.3"/>
+  <circle cx="150" cy="130" r="1" fill="white" opacity="0.2"/>
+  <circle cx="650" cy="30" r="1.5" fill="white" opacity="0.5"/>
+  <circle cx="1100" cy="120" r="1" fill="white" opacity="0.3"/>
+</svg>

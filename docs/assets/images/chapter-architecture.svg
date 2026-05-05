@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <defs>
+    <linearGradient id="g3" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#7B3F3F"/>
+      <stop offset="100%" stop-color="#B5654B"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="400" fill="url(#g3)"/>
+  <!-- Classical building -->
+  <g fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="2">
+    <!-- Steps -->
+    <rect x="250" y="380" width="300" height="10" rx="2"/>
+    <rect x="270" y="365" width="260" height="10" rx="2"/>
+    <rect x="290" y="350" width="220" height="10" rx="2"/>
+    <!-- Columns -->
+    <rect x="300" y="180" width="15" height="170" rx="3"/>
+    <rect x="350" y="180" width="15" height="170" rx="3"/>
+    <rect x="435" y="180" width="15" height="170" rx="3"/>
+    <rect x="485" y="180" width="15" height="170" rx="3"/>
+    <!-- Pediment -->
+    <polygon points="280,180 400,80 520,180"/>
+    <polygon points="300,180 400,100 500,180"/>
+  </g>
+  <!-- Column details -->
+  <line x1="307" y1="200" x2="307" y2="340" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+  <line x1="357" y1="200" x2="357" y2="340" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+  <line x1="442" y1="200" x2="442" y2="340" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+  <line x1="492" y1="200" x2="492" y2="340" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+</svg>

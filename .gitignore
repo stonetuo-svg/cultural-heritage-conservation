@@ -1,0 +1,8 @@
+site/
+*.pyc
+__pycache__/
+.vscode/
+.idea/
+*.bat
+*.ps1
+!start-server.bat
